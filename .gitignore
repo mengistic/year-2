@@ -1,0 +1,8 @@
+junk/**
+.auxtex-auto/**
+personal/
+*.log
+*.pre
+*.aux
+*.gz
+*.html
