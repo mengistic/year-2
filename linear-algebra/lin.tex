@@ -1,0 +1,76 @@
+\input{../preamble.tex}
+
+
+\title{ពិជគណិតលីនេអ៊ែរ}
+\author{បង្រៀនដោយ លោកគ្រូ ហាំ ការីម}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\chapter{លំហវ៉ិចទ័រ}
+\section{រំឭកមេរៀន}
+\begin{example}
+ប្រមាណវិធី $+$ និង $\times$ ជាប្រមាណវិធីក្នុងលើសំណុំ $\N,~\Z,~\Q,~\R$ ឬ $\C$ ។
+ដើម្បីផ្ទៀងផ្ទាត់សំណើខាងលើយើងយក $\K$ ជាសំណុំណាមួយក្នុងចំណោមសំណុំខាងលើ ។
+យើងឃើញថាគ្រប់ $a,b\in\K$ យើងបាន
+\[
+a+b\in\K
+\KHand
+a\times b\in\K
+\]
+ម្យ៉ាងទៀត $a+b$ និង $ab$ ជាធាតុតែមួយគត់ (unique element) ក្នុងសំណុំ $\K$ ដូចនេះប្រមាណវិធី 
+$+$ និង $\times$ ជាប្រមាណវិធីក្នុងលើសំណុំ $\N,~\Z,~\Q,~\R$ ឬ $\C$ ។
+\end{example}
+\begin{example}
+$+$ និង $-$ មិនមែនជាប្រមាណវិធីក្នុងសំណុំ $\Qc$ ទេព្រោះប្រមាណវិធីនេះមិនស្តាប (closed)
+លើ $\Qc$ ឡើយ ។ ជាឧទាហរណ៌យើងអាចយក $a=\sqrt{2}\in\Qc$ និង $b=-\sqrt{2}\in\Qc$ តែ
+\[a+b=\sqrt{2}+(-\sqrt{2})=0\notin\Qc\]
+ហើយ
+\[a\times b=\sqrt{2}(-\sqrt{2})=-2\notin\Qc\]
+ដូច្នេះ $+$ និង $-$ មិនមែនជាប្រមាណវិធីក្នុងលើសំណុំ $\Qc$ ឡើយ ។
+\end{example}
+\newpage
+\begin{example}
+ផលគុណស្កាលែនៃពីរវ៉ិចទ័រក្នុង $\R^n$ មិនមែនជាប្រមាណវិធីក្នុងលើ $\R^n$ ទេព្រោះបើយើងយក
+$\vec{x}=(x_1,x_2,\dots,x_n)\in\R^n$ និង $\vec{y}=(y_1,y_2,\dots,y_n)\in\R^n$
+ដែល $x_i,y_i\in\R$ យើងតែងតែទទួលបាន
+\[
+\vec{x}\cdot\vec{y}=\sum_{i=1}^{n}x_iy_i\in\R
+\]
+មានន័យថា $\vec{x}\cdot\vec{y}\notin\R^n$ នោះប្រមាណវិធីនេះមិនស្តាបលើ $\R^n$ ទេ ។
+\end{example}
+\begin{example}
+តាង $\mathcal{F}(A,A)$ ជាសំណុំនៃអនុគមន៍ពី $A$ ទៅ $A$ ។ គេកំណត់អនុគមន៍មួយដែល
+\[
+\begin{array}{lrll}
+\circ: & \mathcal{F}(A,A)\times\mathcal{F}(A,A) & \longrightarrow & \mathcal{F}(A,A)\\[0.25cm]
+       & (f,g)                                  &\longmapsto      & f\circ g
+\end{array}
+\]
+ជាប្រមាណវិធីក្នុងលើ $\mathcal{F}(A,A)$ ។
+
+ដើម្បីងាយស្រួលសរសេរយើងតាង $\mathcal{F}:=\mathcal{F}(A,A)$ ។
+ដើម្បីបង្ហាញថា $\circ$ ជាប្រមាណវិធីយើងត្រូវស្រាយឱ្យឃើញ $\circ$ ខ្លួនឯងជាអនុគមន៍ (function)
+ហើយមានលក្ខណៈស្តាបលើ $\mathcal{F}$ ។ ដើម្បីស្រាយថា $\circ\colon\mathcal{F}\times\mathcal{F}\to\mathcal{F}$
+ជាអនុគមន៍ យើងយក $(f,g)\in\mathcal{F}\times\mathcal{F}$ ហើយឧបមាថាមាន $a,b\in\mathcal{F}$ ដែល
+$f\circ g=a$ និង $f\circ g=b$ ។
+ដោយយើងកំណត់យក $f\circ g(x)=f(g(x))$ ចំពោះគ្រប់ $x\in A$ នោះយើងបាន
+\[
+a(x)=f(g(x))=b(x)
+\]
+នោះយើងបាន $a=b$ ។ ដូចនេះ $\circ\colon\mathcal{F}\times\mathcal{F}\to\mathcal{F}$ជាអនុគមន៍ ។
+
+បន្ទាប់មកយើងស្រាយភាពស្តាបរបស់ $\circ$ ។ ដោយគ្រប់ $f,g\in\mathcal{F}$ នោះ
+\[
+f\colon A\to A\KHand
+g\colon A\to A
+\]
+នោះយើងបាន $f\circ g(x)=f(g(x))\in A$ គ្រប់ $x\in A$ នោះយើងបាន
+$f\circ g$ ជាអនុគមន៍ពី $A$ ទៅ $A$ ។
+\end{example}
+
+
+
+\end{document}
