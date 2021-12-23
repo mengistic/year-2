@@ -1,0 +1,280 @@
+
+\input{../preamble.tex}
+\title{ពិជគណិត}
+\author{បង្រៀនដោយលោកគ្រូ ចាន់ វិធូ}
+\date{២៣ ធ្នូ ២០២១}
+
+\begin{document}
+
+\chapter{ក្រុម}
+
+\section{និយមន័យក្រុម}
+
+\subsection{ធាតុច្រាស}
+សំណុំ $E$ ប្រដាប់ដោយម្មាណវិធីក្នុង $\cdot$ ហើយ $e\in E$ ជាធាតុណឺត និង
+$a\in E$ ។ គេថា $a\inv\in E$ ជាធាតុច្រាសនៃ $a$ កាលណា $aa\inv = a\inv a=e$ ។
+\begin{example}
+លើ $\Z,~\Q,~\R$ ចំពោះប្រមាណវិធី $+$ ធាតុច្រាសនៃ $a$ គឺ $-a$ ។
+\end{example}
+\begin{example}
+លើ $\Z,~\Q,~\R$ ចំពោះប្រមាណវិធី $\times$ នោះធាតុច្រាសនៃ $a$ គឺ $\frac{1}{a}$
+កាលណា $a\neq 0$ ។
+\end{example}
+\begin{theorem}
+លើ $E$ ប្រដាប់ដោយប្រមាណវិធីក្នុង $\cdot$ ហើយ $a,b$ មានធាតុច្រាសគេបាន
+\[(ab)\inv=a\inv b\inv\]
+\end{theorem}
+\begin{proof}
+យើងមាន  $a,b\in E$ នោះ $ab\in E$ ។ ពិនិត្យ
+\[ab\cdot b\inv a\inv=a (bb\inv) a\inv=aea\inv=aa\inv=e\] 
+និង
+\[b\inv a\inv\cdot ab=b\inv (a\inv a)b=b\inv eb=b\inv b=e\]
+នោះយើងបាន $b\inv a\inv$ ជាធាតុច្រាសនៃ $ab$ ។ 
+ដូចនេះ $\boxed{(ab)\inv = b\inv a\inv}$ ។
+\end{proof}
+
+\subsection{ផ្នែកស្តាប (closed)}
+សំណុំ $E$ ប្រដាប់ដោយប្រមាណវិធីក្នុង $\cdot$ ។ $A$ ជាផ្នែកនៃ $E$ ($A\subset E$) ។
+គេថា $A$ ជាផ្នែកស្តាបនៃ $E$ លុះត្រាតែ $ab\in A$ ចំពោះគ្រប់ $a,b\in A$ ។
+
+\section{ប្រមាណវិធីក្រៅ}
+គេឱ្យ $E,~E$ ជាសំណុំ ។ យកអនុគមន៍
+\[
+\begin{array}{lrll}
+\ast ~: & K\times E &\to & E\\
+     & (\lambda, x) &\mapsto & \lambda\ast x
+\end{array}
+\]
+យើងហៅ $\ast$ ជាប្រមាណវិធីក្រៅលើ $E$ ការីក្នុង $K$ ។
+
+\section{ក្រុម}
+\subsection{កន្លះក្រុម (semigroup)}
+\begin{definition}
+គេឱ្យ $G$ ជាសំណុំប្រមាណវិធីក្នុង $\cdot$ ។ គេថា​ $(G,~\cdot)$ 
+ជាកន្លះក្រុមកាលណាប្រមាណវិធីនេះមានលក្ខណៈផ្តុំ (associativity) ។ មានន័យថាគ្រប់
+$a,b,c\in G$ យើងបាន $(ab)c=a(bc)$ ។
+\end{definition}
+
+\begin{example}
+យើងមាន $(\N,+),~(\Z,+),~(\Q,+)$ និង $(\R,+)$ ជាកន្លះក្រុម ។
+\end{example}
+\begin{example}
+យើងមាន $(\N,\cdot),~(\Z,\cdot),~(\Q,)$ និង $(\R,\cdot)$ ជាកន្លះក្រុម ។
+\end{example}
+\begin{example}
+$(\mathcal{P}(E),~\cup),~(\mathcal{P}(E),~\cap),~$ ជាកន្លះក្រុម
+\end{example}
+
+\newpage
+\begin{example}
+លើ $\Z$ ប្រដាប់ដោយប្រមាណវិធី $\ast$ កំណត់ដោយ
+\[a\ast b=a+b-ab\]
+គ្រប់ $a,b\in\Z$ ។ បង្ហាញថា $(\Z,\ast)$ ជាកន្លះក្រុម ។
+\end{example}
+\begin{proof}
+គ្រប់ $a,b,c\in\Z$ យើងមាន
+\begin{align*}
+(a\ast b)\ast c&=(a+b-ab)\ast c\\
+&=(a+b-ab)+c-(a+b-ab)c\\
+&=a+b+c-ab-bc-ca+abc
+\end{align*}
+និង
+\begin{align*}
+a\ast (b\ast c)&=a\ast (b+c-bc)\\
+&=a+(b+c-bc) -a(b+c-bc)\\
+&=a+b+c-ab-bc-ca+abc
+\end{align*}
+នោះយើងបាន $(a\ast b)\ast c=a\ast (b\ast c)$ ដូចនេះ
+\fbox{$(\Z,\ast)$ ជាកន្លះក្រុម} ។
+\end{proof}
+
+
+\begin{example}
+លើ $\R^{\ast}_{+}$ ប្រដាប់ដោយប្រមាណវិធីក្នុង $\ast$ កំណត់ដោយ
+\[
+a\ast b=a^{\ln b}
+\]
+គ្រប់ $a,b\in \R^{\ast}_{+}$ ។ បង្ហាញថា $(\R^{\ast}_{+}, \ast)$
+ជាកន្លះក្រុម ។
+\end{example}
+\begin{proof}
+គ្រប់ $a,b,c\in \R^{\ast}_{+}$ យើងមាន
+\begin{align*}
+(a\ast b)\ast c&=(a^{\ln b})\ast c\\
+&= \left(a^{\ln b}\right)^{\ln c}\\
+&= a^{(\ln b)(\ln c)}
+\end{align*}
+និង 
+\begin{align*}
+a*(b*c)&=a*(b^{\ln c})\\
+&=a^{\ln (b^{\ln c})}\\
+&=a^{(\ln b)(\ln c)}
+\end{align*}
+នោះយើងបាន $(a\ast b)\ast c=a\ast (b\ast c)$ ដូចនេះ
+\fbox{$(\R^{\ast}_{+}, \ast)$ ជាកន្លះក្រុម} ។
+\end{proof}
+
+\newpage
+គេឱ្យ $(G,*)$ ជាកន្លះក្រុម ហើយចំពោះ ​$x_1,x_2,\dots,x_n\in G$ គេតាង
+\begin{align*}
+\mathop{\ast}\limits_{i=1}^{n}&=x_1*x_1*\cdots*x_n\\
+&=\left(\mathop{\ast}\limits_{i=1}^{k}\right)*
+\left(\mathop{\ast}\limits_{i=k+1}^{n}\right)
+\end{align*}
+ហើយគេកំណត់សរសេរ
+\[
+x^n := \underbrace{x*x*\cdot *x}_{n \text{ដង}}
+\]
+នោះយើងបាន $(x^{n})^m=x^{}nm$ និង $x^n*x^m=x^{n+m}$ ។
+
+\subsection{ម៉ូណូអុីត (Monoide)}
+\begin{definition}
+សំណុំ $G$ ប្រដាប់ដោយប្រមាណវិធីក្នុង $*$ ។ គេថា $(G,~*)$ ជាម៉ូណូអុីតកាល ណា 
+$(G,~*)$ ជាកន្លះក្រុមហើយមានធាតុណឺត ។ នោះយើងបាន
+\begin{itemize}
+\item $a*(b*c)=(a*b)*c$ គ្រប់ $a,b,c\in G$ និង
+\item មាន ​$e\in G$ ដែល $e*a=a*e=a$ គ្រប់ $a\in G$ ។
+\end{itemize}
+\end{definition}
+
+\begin{example}
+$(\N,+),~(\Z,+),~(\Q,+),~(\R,+)$ ជាម៉ូណូអុីត ។
+\end{example}
+\begin{example}
+$(\N, \cdot), ~(\Z,\cdot),~(\Q,\cdot), ~(\R, \cdot)$ ជាម៉ូណូអុីត ។
+\end{example}
+\begin{example}
+លើ $\R^{\ast}_{+}$ ប្រដាប់ដោយប្រមាណវិធីក្នុង $*$ កំណត់ដោយ
+\[
+a*b=a^{\ln b}
+\]
+ចំពោះគ្រប់ $a,b\in\R^{\ast}_{+}$ ។ តើ $(\R^{\ast}_{+},~*)$ ជាម៉ូណូអុីតឬទេ ។
+\end{example}
+\begin{proof}
+តាមសម្រាយខាងលើ $(\R^{\ast}_{+},~*)$ ជាកន្លះក្រុម ។ ដើម្បីស្រាយថា 
+$(\R^{\ast}_{+},~*)$ ជាម៉ូណូអុីតយើងត្រូវរក $x\in\R^{\ast}_{+}$ ដែល
+$x*a=a*x=a$ គ្រប់ $a\in\R^{\ast}_{+}$ ។ យើងមាន
+\[
+a*e = a^{\ln e}=a
+\] 
+និង
+\end{proof}
+\begin{example}
+$(\mathcal{P}(E),~\cup)$ និង $(\mathcal{P}(E),~\cup)$ ជាម៉ូណូអុីត ។
+\end{example}
+
+\subsection{ម៉ូណូអុីតរង}
+\begin{definition}
+គេឱ្យ $(G, ~*)$ ជាម៉ូណូអុីត និង $H\supset G$ ជាផ្នែកមិនទទេនៃ $G$ ។
+គេថា $(H, ~*)$ ជាម៉ូណូអុីតរងប្រដាប់ដោយប្រមាណវិធី $*$ លុះត្រាតែបើធាតុ $e$ 
+ជាធាតុណឺតនៃ $G$ នោះ $e\in H$ និង
+\[a*b\in H\]
+ចំពោះ $a,b\in H$ ។
+\end{definition}
+\begin{example}
+គេយក $n\in\N$ នោះយើងបាន $(n\Z,~+)$ ជាម៉ូណូអុីតរងនៃ $(\Z, ~+)$​ ព្រោះ
+$0$ ជាធាតុណឹតរបស់ $\Z$ ហើយ $0=0\cdot n\in n\Z$  នោះ $n\Z\neq\emptyset$ ។
+ម្យ៉ាងទៀតបើ $a,b\in n\Z$ នោះមាន $x,y\in\Z$ ដែល $a=nx,~b=ny$ ហេតុនេះ
+\[
+a+b=nx+nx=n(x+y)\in n\Z
+\]
+នោះ $(n\Z,~+)$ ជាធាតុ
+\end{example}
+\begin{theorem}
+ប្រសព្វនៃពីរម៉ូណូអុីតរងនៃម៉ូណូអុីត $(G,~*)$ ក៏ជាម៉ូណូអុីតរងនៃ $(G,~*)$ ដែរ ។
+\end{theorem}
+\begin{proof}
+តាង $e$ ជាធាតុណឺតនៃ $G$ ហើយតាង $A,B\subseteq G$ ជាមូ៉ណូអុីតរងនៃ $(G,*)$ ។ 
+នោះ $e\in A$ និង $e\in B$ ហេតុនេះ $e\in A\cap B$ ។
+
+បន្ទាប់មកទៀតយើងស្រាយលក្ខណៈស្តាប ។ យក $x,y\in A\cap B$ នោះ
+\begin{align*}
+&\begin{cases}
+x\in A\\
+y\in A
+\end{cases}
+\KHand
+\begin{cases}
+x\in B\\
+y\in B
+\end{cases}\\
+\implies\quad &x*y\in A\KHand x*y\in B
+\end{align*}
+នោះយើងបាន $x*y\in A\cap B$ ។
+សរុបមកយើងបាន $(A\cap B, ~*)$ ជាម៉ូណូអុីតរងនៃ $(G,~*)$ ។
+\end{proof}
+
+\newpage
+\begin{corollary}
+ប្រសព្វនៃគ្រួសារម៉ូណូអុីតរងនៃ $(G,~*)$ ជាម៉ូណូអុីតរងនៃ $(G,*)$ ។
+\end{corollary}
+\begin{proof}
+តាង $\mathcal{I}=\Big\{
+	i\in\N ~:~ 
+	A_i\subset G\text{ និង }
+	(A_i,~*) \text{ ជាម៉ូណូអុីត}\Big\}$
+ជាសំណុំសន្ទស្ស៍នៃគ្រូសារម៉ូណូអុីតរងនៃ $(G,~*)$ ។ យើងចង់ស្រាយថា
+$A:=\bigcap_{i\in\mathcal{I}}$ ជាម៉ូណូអុីតរងដែរ ។
+
+តាង $e$ ជាធាតុណឺតរបស់ $G$ ។ យើងឃើញថា $A\neq\emptyset$ ព្រោះ $e\in A_i$
+គ្រប់ $i\in\mathcal{I}$ នោះយើងបាន $e\in\bigcap_{i\in\mathcal{I}}A_i=A$ ។
+បន្ទាប់មកទៀតយើងស្រាយលក្ខណៈស្តាបលើ $A$ ។ យក $x,y\in A$ 
+នោះគ្រប់ $i\in\mathcal{I}$ យើងបាន
+\begin{align*}
+&x\in A_i \wedge y\in A_i\\
+\implies\quad &x*y\in A_i && (\text{លក្ខណៈស្តាបរបស់} A_i)\\
+\implies\quad &x*y\in \bigcap_{i\in\mathcal{I}}A_i
+\end{align*}
+នោះ $(A,~*)$ មានធាតុណឹត $e$ ហើយមានលក្ខណៈស្តាបលើប្រមាណវិធី $*$ ។\\[0.3cm]
+ដូចនេះ \quad\fbox{$(A,~+)$ ជាម៉ូណូអុីតរងនៃ $(G,~*)$ } ។
+
+\end{proof}
+%
+\newpage
+\noindent
+\textbf{សម្គាល់៖} ប្រជុំនៃពីរម៉ូណូអុីតមិនមែនជាម៉ូណូអុីតទូទៅទេ ។ ឧទាហរណ៍
+$(2\Z, +),~(3\Z,+)$ ជាម៉ូណូអុីតរងនៃ $(\Z,+)$ តែ $(2\Z\cup 3\Z, +)$
+មិនមែនជាម៉ូណូអុីតទេព្រោះ $2\in 2\Z$ ហើយ $3\in 3\Z$ 
+ក៏ប៉ុន្តែ $5=2+3\notin	 2\Z\cup 3\Z$ ។
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
