@@ -1,0 +1,130 @@
+
+
+
+\input{../preamble.tex}
+\renewcommand{\definitionName}{Definition}
+
+
+\title{គណិតវិភាគ}
+\author{បង្រៀនដោយលោកគ្រូ ជា សុផល (Mr. Jams)}
+\date{២៣ ឆ្នូ ២០២១}
+
+%Real: Pha Nada
+%Now: Chea Sophal
+%Nickname: Jams
+%Prof. of maths at RUPP
+%Tel: 011 865 985
+%Mail: sophal.c007@gmail.com
+%Facebook: Sophal Chea
+%Telegram: sophal chea
+
+
+
+
+\begin{document}
+\maketitle
+
+\chapter{Logarithmic and Exponential Functions}
+\section{Logarithmic function}
+\begin{definition}
+យក $a>0$ ហើយ $a\neq 1$ ។ គេតាងអនុគមន៍លោការីតគោល $a$ ដោយអនុគមន៍
+\[
+\begin{array}{lrlll}
+f\colon  &\R^{*}_{+}  &\rightarrow  &\R\\
+         & x           &\longmapsto & y=\log_ax
+\end{array}
+\]
+យើងសរសេរ $y=\log_ax\iff x=a^y$.
+\end{definition}
+ជាឧទាហរណ៍ $\log_2\sqrt{8}=3/2$, ព្រោះថា $2^{3/2}=\sqrt{2^3}=\sqrt{8}$.
+
+
+\begin{corollary}
+យើងបានវិបាកដូចខាងក្រោម
+\begin{itemize}
+\item $\log_a1=0$
+\item $\log_aa=1$
+\item $\log_a\frac{1}{a}=\log_{\frac{1}{a}}a=-1$
+\item $\log_aa^n=n$
+\item $\log_{a^m}a^n=\frac{n}{m}$
+\end{itemize}
+\end{corollary}
+
+\begin{theorem}
+នេះជាលក្ខណៈពិសេសរបស់ $\log$ ៖
+\begin{itemize}
+\item $\log_ax_1+\log_ax_2=\log_ax_1x_2$
+\item $\log_a\frac{1}{x}=-\log_ax$
+\item $\log_ax-\log_ay=\log_a\frac{x}{y}$
+\item $\log_ax^n=n\log_ax$
+\end{itemize}
+\end{theorem}
+\begin{proof}
+តាង $y_1=\log_ax_1$ នោះយើងបាន $x_1=a^{y_1}$ ។ ដូចគ្នាដែរយើងតាង
+$y_2=\log_ax_2\iff x_2=a^{y_2}$ ។ ដូចនេះ
+\begin{align*}
+&x_1x_a^{y_1}a^{y_2}=a^{y_1+y_2}\\
+\implies\quad &y_1+y_2=\log_a x_1x_2
+\end{align*}
+\end{proof}
+
+\begin{example}
+រកតម្លៃ $x$ បើ
+\[
+\log_{\sqrt{3}}x+\log_{\sqrt{3}}x^2+\log_{\sqrt{3}}x^3+
+\cdots+\log_{\sqrt{3}}x^n=2021
+\]
+\end{example}
+\begin{solution}
+សមីការមានន័យកាលណា $x>0$ ។ យើងបាន
+\begin{align*}
+&\log_{\sqrt{3}}x+2\log_{\sqrt{3}}x+3\log_{\sqrt{3}}x+\cdots+n\log_{\sqrt{3}}x
+	=2021\\
+&(1+2+3+\cdots+n)\log_{3^{1/2}}x=2021\\
+&\frac{n(n+1)}{2}\cdot 2\log_{3}x=2021\\
+\implies\quad &x=3^{\frac{2021}{n(n+1)}}
+\end{align*}
+\end{solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+%\chapter{Hyperbolic and Inverse Function}
+%
+%
+%\chapter{Integration}
+%
+%
+%\chapter{Series}
+%
+%
+%\chapter{Several Variables Function}
+%
+%
+%\chapter{Multiple Integral}
+
+
+
+
+\end{document}
