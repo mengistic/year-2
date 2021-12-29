@@ -86,12 +86,75 @@ $y_2=\log_ax_2\iff x_2=a^{y_2}$ ។ ដូចនេះ
 \end{align*}
 \end{solution}
 
+\newpage  %%   25-12-2021 =================================================
+\section{រូបមន្តប្តូរគោល}
+\begin{theorem}[រូបមន្តប្តូរគោល]
+$\log_ab=\frac{\log_cb}{\log_ca}$
+\end{theorem}
+\begin{proof}
+យើងតាង $y=\log_ab$ នោះ $b=a^y$ ។ បំពាក់លោការីតគោល $c$ លើអង្គសងខាងយើងបាន
+\begin{align*}
+&\log_cb=\log_ca^y=y\log_ca\\
+\implies\quad &y=\frac{\log_cb}{\log_ca}
+\end{align*}
+\end{proof}
+\begin{example}
+រកតម្លៃ $x$ ដើម្បីឱ្យ $\log_3x=\log_4x$ ។
+\end{example}
+\begin{solution}
+សមីការមានន័យកាលណា $x>0$ ។ តាមរូបមន្តប្តូរគោលយើងបាន
+\begin{align*}
+&\log_3x=\log_4x=\frac{\log_3x}{\log_34}\\
+\implies\quad &\log_3x\left(1-\frac{1}{\log_34}\right)=0
+\end{align*}
+នោះយើងបាន $\log_3x=0\implies x=1$ ។
+\end{solution}
+
+\begin{corollary}
+យើងបានកូរ៉ូលែដូចខាងក្រោម
+\begin{itemize}
+\item $\log_ab=\frac{1}{\log_ba}$
+\item $\log_{a^m}b^n=\frac{n}{m}\log_ab$
+\end{itemize}
+\end{corollary}
 
 
+\section{លោកការីតគោល 10 (ទសភាគ)}
+យើងសរសេរ $\log_{10}x=\log x=\lg x$ ។
 
+\section{លោការីតនេពែ1 Neyzer logarithm}
+គេមាន $e\approx 2.718$ ។ យើងសរសេរ $\log_e=\mathrm{Log} x=\ln x$ ។
 
+\section{Derivative of Logarithmic Function}
+យើងមាន $y=\log_ax$
+\begin{itemize}
+\item $\lim_{x\to 0}\frac{\ln(1+x)}{x}=1$
+\item $\lim_{x\to 0}\frac{\log_a (1+x)}{x}=\frac{1}{\ln a}$
+\item $y=\log_ax\implies y'=\frac{1}{x\ln a}$
+\end{itemize}
 
-
+\newpage
+\begin{example}
+រកដេរីវេនៃ $y=\log_3\sqrt[3]{\lg\sqrt[3]{\ln\sqrt[3]{x}}}$
+\end{example}
+\begin{solution}
+យើងមាន
+\begin{align*}
+y&=\log_3\sqrt[3]{\lg\sqrt[3]{\ln\sqrt[3]{x}}}\\
+ &=\frac{1}{3}\log_3\left[\frac{1}{3}\cdot\log\left(\frac{1}{3}\ln x\right)\right]\\
+ &=\underbrace{\frac{1}{3}\log_3\frac{1}{3}}_{\text{constant}}+
+ \frac{1}{3}\log_3\left[\log\left(\frac{1}{3}\ln x\right)\right]\\
+\implies\quad
+y'&=\frac{1}{3}\cdot\frac{1}{\log\left(\frac{1}{3}\ln x\right)\ln 3}\cdot
+  \left(\underbrace{\log\frac{1}{3}}_{\text{constant}}+\log\ln x\right)'\\
+  &=\frac{1}{3\ln 3}\cdot\frac{1}{\log\left(\frac{1}{3}\ln x\right)}\cdot
+  \left(\frac{(\ln x)'}{\ln 10\cdot\ln x}\right)\\
+\implies\quad
+y'  
+  &=\boxed{\frac{1}{3\ln 3}\cdot\frac{1}{\log\left(\frac{1}{3}\ln x\right)}\cdot
+  \left(\frac{1}{x\ln 10\cdot\ln x}\right)}
+\end{align*}
+\end{solution}
 
 
 
