@@ -1,6 +1,7 @@
 junk/**
 .auxtex-auto/**
 personal/
+attendance/
 *.log
 *.pre
 *.aux
