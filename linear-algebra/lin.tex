@@ -18,18 +18,24 @@
 \[
 a+b\in\K
 \KHand
-a\times b\in\K
+a\times b\in\K\KHstop
 \]
-ម្យ៉ាងទៀត $a+b$ និង $ab$ ជាធាតុតែមួយគត់ (unique element) ក្នុងសំណុំ $\K$ ដូចនេះប្រមាណវិធី 
-$+$ និង $\times$ ជាប្រមាណវិធីក្នុងលើសំណុំ $\N,~\Z,~\Q,~\R$ ឬ $\C$ ។
+បន្ទាប់មកទៀត យើងនឹងស្រាយលក្ខណៈ uniqueness របស់ប្រមាណវិធីទាំងពីរ ។
+យក $a_0,b_0\in\K$ ដែល $a_0=a$ និង $b_0=b$ នោះយើងបាន
+\[
+a+b=a_0+b_0\KHand
+a\times b=a_0\times b_0
+\]
+ហេតុនេះ $a+b$ និង $ab$ ជាធាតុតែមួយគត់ (unique element) ក្នុងសំណុំ $\K$ ។ 
+ដូចនេះប្រមាណវិធី $+$ និង $\times$ ជាប្រមាណវិធីក្នុងលើសំណុំ $\N,~\Z,~\Q,~\R$ ឬ $\C$ ។
 \end{example}
 \begin{example}
-$+$ និង $-$ មិនមែនជាប្រមាណវិធីក្នុងសំណុំ $\Qc$ ទេព្រោះប្រមាណវិធីនេះមិនស្តាប (closed)
+$+$ និង $\times$ មិនមែនជាប្រមាណវិធីក្នុងសំណុំ $\Qc$ ទេព្រោះប្រមាណវិធីនេះមិនស្តាប (closed)
 លើ $\Qc$ ឡើយ ។ ជាឧទាហរណ៌យើងអាចយក $a=\sqrt{2}\in\Qc$ និង $b=-\sqrt{2}\in\Qc$ តែ
 \[a+b=\sqrt{2}+(-\sqrt{2})=0\notin\Qc\]
 ហើយ
 \[a\times b=\sqrt{2}(-\sqrt{2})=-2\notin\Qc\]
-ដូច្នេះ $+$ និង $-$ មិនមែនជាប្រមាណវិធីក្នុងលើសំណុំ $\Qc$ ឡើយ ។
+ដូច្នេះ $+$ និង $\times$ មិនមែនជាប្រមាណវិធីក្នុងលើសំណុំ $\Qc$ ឡើយ ។
 \end{example}
 \newpage
 \begin{example}
@@ -39,7 +45,8 @@ $\vec{x}=(x_1,x_2,\dots,x_n)\in\R^n$ និង $\vec{y}=(y_1,y_2,\dots,y_n)\in\R
 \[
 \vec{x}\cdot\vec{y}=\sum_{i=1}^{n}x_iy_i\in\R
 \]
-មានន័យថា $\vec{x}\cdot\vec{y}\notin\R^n$ នោះប្រមាណវិធីនេះមិនស្តាបលើ $\R^n$ ទេ ។
+មានន័យថា $\vec{x}\cdot\vec{y}\notin\R^n$ នោះប្រមាណវិធីនេះមិនមែនជាប្រមាណវិធីក្នុងរបស់សំណុំ
+$\R^n$ ទេ ។
 \end{example}
 \begin{example}
 តាង $\mathcal{F}(A,A)$ ជាសំណុំនៃអនុគមន៍ពី $A$ ទៅ $A$ ។ គេកំណត់អនុគមន៍មួយដែល
@@ -52,24 +59,191 @@ $\vec{x}=(x_1,x_2,\dots,x_n)\in\R^n$ និង $\vec{y}=(y_1,y_2,\dots,y_n)\in\R
 ជាប្រមាណវិធីក្នុងលើ $\mathcal{F}(A,A)$ ។
 
 ដើម្បីងាយស្រួលសរសេរយើងតាង $\mathcal{F}:=\mathcal{F}(A,A)$ ។
-ដើម្បីបង្ហាញថា $\circ$ ជាប្រមាណវិធីយើងត្រូវស្រាយឱ្យឃើញ $\circ$ ខ្លួនឯងជាអនុគមន៍ (function)
-ហើយមានលក្ខណៈស្តាបលើ $\mathcal{F}$ ។ ដើម្បីស្រាយថា $\circ\colon\mathcal{F}\times\mathcal{F}\to\mathcal{F}$
-ជាអនុគមន៍ យើងយក $(f,g)\in\mathcal{F}\times\mathcal{F}$ ហើយឧបមាថាមាន $a,b\in\mathcal{F}$ ដែល
-$f\circ g=a$ និង $f\circ g=b$ ។
-ដោយយើងកំណត់យក $f\circ g(x)=f(g(x))$ ចំពោះគ្រប់ $x\in A$ នោះយើងបាន
-\[
-a(x)=f(g(x))=b(x)
-\]
-នោះយើងបាន $a=b$ ។ ដូចនេះ $\circ\colon\mathcal{F}\times\mathcal{F}\to\mathcal{F}$ជាអនុគមន៍ ។
+ដើម្បីបង្ហាញថា $\circ$ ជាប្រមាណវិធីក្នុងយើងត្រូវស្រាយឱ្យឃើញពីលក្ខណៈមានតែមួយគត់ (uniqueness)
+ហើយមានលក្ខណៈស្តាបលើ $\mathcal{F}$ ។ 
+\begin{itemize}
+\item លក្ខណៈ Unique ៖ យក $f,g,h,k\in\mathcal{F}$ ដែល $f=h$ និង $g=k$ នោះគ្រប់ $x\in A$ យើងបាន
+\begin{align*}
+(f\circ g)(x)&=f\Big[g(x)\Big]\\
+ &=f\Big[k(x)\Big]   && (\text{ព្រោះ }g=k)\\
+ &=h\Big[k(x)\Big]   && (\text{ព្រោះ }f=h)\\
+ &=(h\circ k)(x)
+\end{align*}
+នោះយើងបាន $f\circ g=h\circ k$ ។
 
-បន្ទាប់មកយើងស្រាយភាពស្តាបរបស់ $\circ$ ។ ដោយគ្រប់ $f,g\in\mathcal{F}$ នោះ
+\item បន្ទាប់មកយើងស្រាយភាពស្តាបរបស់ $\circ$ ។ ដោយគ្រប់ $f,g\in\mathcal{F}$ នោះ
 \[
 f\colon A\to A\KHand
 g\colon A\to A
 \]
-នោះយើងបាន $f\circ g(x)=f(g(x))\in A$ គ្រប់ $x\in A$ នោះយើងបាន
-$f\circ g$ ជាអនុគមន៍ពី $A$ ទៅ $A$ ។
+គ្រប់ $x\in A$ យើងបាន $f\circ g(x)=f(g(x))\in A$ នោះ
+$f\circ g$ ជាអនុគមន៍ពី $A$ ទៅ $A$ ។ មានន័យថា $f\circ g\in\mathcal{F}$ ។
+\end{itemize}
+ដូចនេះ $\circ$ ជាប្រមាណវិធីក្នុងរបស់សំណុំ $\mathcal{F}$ ។
 \end{example}
+
+
+%% 27-12-2021
+\newpage
+\begin{definition}
+អនុគមន៍ $f:A\to B$ និង $g:A\to B$ ស្មើគ្នាកាលណាដែនកំណត់ $\mathcal{D}(f)=\mathcal{D}(g)$
+ហើយ \[f(x)=g(x)\] ចំពោះគ្រប់ $x\in A$ ។
+\end{definition}
+\begin{example}
+បើយើងឱ្យ $f(x)=1+\frac{x^2-1}{x(x-1)}$ និង $g(x)=1+\frac{x+1}{x}$ ។
+យើងឃើញថា $f,g$ មើលទៅដូចជា\textit{ស្មើគ្នា}មែន ក៏ប៉ុន្តែដែនកំណត់
+\[
+\mathcal{D}(f)=\R\setminus\{0,1\}
+\KHand
+\mathcal{D}(g)=\R\setminus\{0\}
+\]
+ដូចនេះយើងបាន $f\neq g$ ។
+\end{example}
+
+\section{ក្រុម}
+\begin{definition}
+យក $G$ ជាសំណុំមួយហើយ $*$ ជាប្រមាណវិធីក្នុងរបស់ $G$ ។ គេថា $(G,*)$ ជាក្រុមកាលណា
+\begin{itemize}
+\item (លក្ខណៈផ្តុំ) $a*(b*c)=(a*b)*c$ ចំពោះគ្រប់ $a,b,c\in G$
+\item (ធាតុណឺត) មាន $e\in G$ ដែល $e*a=a*e=a$ ចំពោះគ្រប់ $a\in G$
+\item (ធាតុច្រាស) គ្រប់ $a\in G$ មាន $b\in G$ ដែល $a*b=b*a=e$ ។
+\end{itemize}
+\end{definition}
+
+\newpage
+\begin{exercise}
+យក $E$ ជាសំណុំមួយ ។ ឧបមាថា $\mathcal{S}(E)$ ជាសំណុំនៃអនុវត្តន៍មួយទល់មួយ (bijection)
+ពី $E$ ទៅ $E$ ។ យក $\circ$ ជាប្រមាណវិធីក្នុងលើ $\mathcal{S}(E)$ 
+ដែលជាបណ្តាក់រវាងអនុវត្ត៍មួយទល់មួយលើ $E$ ។ តើ $(\S(E), \circ)$ ជាក្រុមឬទេ ? 
+ជាក្រុមអែប៊ែលឬទេ ?
+\end{exercise}
+\begin{solution}
+យើងនឹងស្រាយថា ​$(\S(E), \circ)$ ជាក្រុម តែមិនមែនជាក្រុមអាប៊ែលទេ ។ 
+ដំបូងយើងត្រូវដឹងថាតើប្រមាណវិធីនេះស្តាបលើ ​$\S(E)$ ឬទេ ។ យក $f,g\in\S(E)$ ។ 
+យើងចង់ស្រាយថា $f\circ g$ ក៏ជាអនុវត្តមួយទល់មួយដែរ ។ ឧបមាថាមាន
+$x,y\in E$ ដែល $(f\circ g)(x)=(f\circ g)(y)$ នោះយើងបាន
+\begin{align*}
+&f(g(x))=f(g(y))\\
+\implies\quad &g(x)=g(y)  &&\text{(ព្រោះ $f$ មួយទល់មួយ)}\\
+\implies\quad &x=y        &&\text{(ព្រោះ $g$ មួយទល់មួយ)}
+\end{align*}
+ហេតុនេះ $f\circ g\in\S(E)$ ។ ដើម្បីស្រាយថា $\S(E)$ ជាក្រុម យើងត្រូវផ្ទៀងផ្ទាត់លក្ខណៈ ៖
+\begin{itemize}
+\item យក $f,g,h\in\S(E)$ និង ​$x\in E$ ។ នោះ
+\[
+((f\circ g)\circ h)x=(f\circ g)(h(x))=f(g(h(x)))
+\]
+ស្រដៀងគ្នាដែរ យើងបាន
+\[
+(f\circ (g\circ h))x=f( (g\circ h)x )=f(g(h(x)))
+\]
+នោះ $(f\circ g)\circ h=f\circ (g\circ h)$ ។
+\item តាង $\id\colon E\to E$ ដោយ $id(x)=x$ គ្រប់ $x\in E$ ។ បើ $\id(a)=\id(b)$
+នោះយើងបាន $a=b$ ហេតុនេះ $id$ ជាអនុវត្តមួយទល់មួយលើ $E$ ។ យក​ $f\in\S(E)$ 
+នោះគ្រប់ $x\in E$ យើងបាន
+\[
+(f\circ\id)(x)=f(\id(x))=f(x)
+\]
+ហើយ
+\[
+(\id\circ f)(x)=\id(f(x))=f(x)
+\]
+ហេតុនេះ $f\circ\id = \id\circ f=f$ ។ ($\id$ ជាធាតុណឹតក្នុង $\S(E)$) ។
+
+\item យក $f\in\S(E)$ ។ តាមលក្ខណៈរបស់អនុវត្តន៍មួយទល់មួយ យើងបានអនុគមន៍ច្រាស
+$f\inv$ ក៏ជាអនុវត្តមួយទល់មួយដែរ ។ ម្យ៉ាងទៀតគ្រប់ $x\in E$ យើងបាន
+\[
+(f\circ f\inv) (x)=f(f\inv (x))=x=\id(x)
+\]
+ស្រដៀងគ្នាដែរ
+\[
+(f\inv\circ f) (x)=f\inv(f(x))=x=\id(x)
+\]
+នោះ $f\circ f\inv=f\inv\circ f=\id$ (មានន័យថា $f\inv$ ជាធាតុច្រាសនៃ ​$f$) ។
+\end{itemize}
+ដូចនេះយើងបាន $(\S(E), \circ)$ ជាក្រុម ។ យើងនឹងស្រាយថា $G$ មិនមែនជាក្រុមអាប៊ែលទេ ។
+យក $a,b,c\in E$ ជាចំនួនផ្សេងៗគ្នាក្នុង $E$ ។ យើងរើសយកអនុគមន៍ $f,g\in\S(E)$ ដែល
+\[
+f(a)=b,\quad g(a)=a\KHand g(b)=c
+\]
+នោះយើងបាន $f(g(a))=f(a)=b$ ក៏ប៉ុន្តែ $g(f(a))=g(b)=c$ ។
+ហេតុនេះ $f\circ g\neq g\circ f$ ។ មានន័យថា $(\S(E),\circ)$ មិនមែនជាក្រុមអាប៊ែលទេ ។\\[0.2cm]
+ដូចនេះ \fbox{$(\S(E), \circ)$ is a non-Abelian group.}
+
+%តែក្រុមនេះមិនមែនជាក្រុមអាប៊ែលទេ 
+%ព្រោះវាជាទូទៅមិនមានលក្ខណៈត្រឡប់ទេ ជាឧទាហរណ៍យើងអាចយក $f,g\in\S(\R)$ កំណត់ដោយ
+%$f(x)=x-1$ និង $g(x)=2x$ នោះយើងបាន
+%\[
+%(f\circ g)(x)=f(g(x))=f(2x)=2x-1
+%\]
+%ក៏ប៉ុន្តែ
+%\[
+%(g\circ f)(x)=g(f(x))=g(x-1)=2(x-1)=2x-2\KHstop
+%\]
+%ដូចនេះ \quad\fbox{$(\S(E), \circ)$ ជា non-Abelian group ។}
+\end{solution}
+
+\begin{corollary}
+គេយក ​$n\in\N$ ហើយគេយក $E=\{1,2,3,\dots,n\}$ ។ ដូចលំហាត់ខាងលើដែរ យើងកំណត់សរសេរ
+$\S_n:=\S(E)$ ជាសំណុំនៃអនុគមន៍មួយទល់មួយពី $E$ ទៅ $E$ ។ យើងបាន $(\S_n,\circ)$​ ជាក្រុម
+តែមិនមែនជាក្រុមអាប៊ែលទេ (non-Abelian group) ។
+\end{corollary}
+
+\begin{proposition}
+យក $(G,*)$ ជាក្រុម ។
+\begin{enumerate}[label={(\alph*)}]
+	\item ធាតុណឺតមានតែមួយគត់
+	\item ធាតុច្រាស $x'$ របស់ $x$ មានតែមួយគត់
+	\item ធាតុច្រាស់របស់ចម្រាសរបស់ $x$ គឺ $x$; មានន័យថា $(x')'=x$
+	\item គ្រប់ធាតុ $x,y\in G$ យើងបាន $(x*y)=y'*x'$
+	\item គ្រប់ធាតុ $x,y,z\in G$ បើ $x*y=x*z$ នោះ $y=z$ ។
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\text{}
+\begin{enumerate}[label={(\alph*)}]
+	\item យើងឧបមាថាមាន $e,e_0$ ជាធាតុណឺតរបស់ $G$ ។
+	ដោយ $e_0$ ជាធាតុណឺតនោះយើងបាន $e_0*e=e*e_0=e$ ។ ដូចគ្នាដែរ ដោយ $e$ ជាធាតុណឺតនោះ
+	\[e_0*e=e*e_0=e_0\]
+	នោះយើងបាន $e=e_0$ ។ ដូចនេះធាតុណឺតមានតែមួយគត់ ។
+	%%
+	\item ស្រដៀងគ្នាដែរ យើងឧបមាថាមាន $a,b$ ជាធាតុច្រាសរបស់ $x$ ។ ហេតុនេះ
+	\begin{align*}
+	a=e*a=(b*x)*a=b*(x*a)=b*e=b
+	\end{align*}
+	នោះ $a=b$ ។ ដូចនេះធាតុណឹតរបស់ $x$ មានតែមួយគត់ហើយយើងនឹងតាងវាដោយ $x'$ ។
+	%%
+	\item ដោយហេតុថា $x'$ ជាធាតុច្រាសនៃ $x$ នោះយើងបាន
+	\[x*x'=x'*x=e\]
+	នោះយើងបានធាតុច្រាសរបស់ $x'$ គឹ $x$ ។ ដូចនេះ $\boxed{(x')'=x}$ ។
+	%%
+	\item យក $x,y\in G$ នោះ $x',y'\in G$ (well defined) ។ ពិនិត្យមើល
+	\[(x*y)*(y'*x')=x*(y*y')*x'=x*e*x'=e\]
+	ម្យ៉ាងទៀត
+	\[(y'*x')*(x*y)=y'*(x'*x)*y=y'*e*y=e\]
+	នោះយើងទាញបានថាចម្រាសរបស់ $x*y$ គឹ $y'*x'$ ។ \\[0.2cm]
+	ដូចនេះ $\boxed{(x*y)'=y'*x'}$ ។
+	%%
+	\item យើងមាន $x,y,z\in G$ ដែល $x*y=x*z$ ។ ដោយ $*$ ជាប្រមាណវិធីក្នុងរបស់ $G$ នោះ
+	\begin{align*}
+	&x'*(x*y)=x'*(x*z)\\ \implies\quad
+	&(x'*x)*y=(x'*x)*z\\ \implies\quad
+	&e*y=e*z \\ \implies\quad
+	&y=z
+	\end{align*}
+	ម្យ៉ាងទៀត ចម្រាសនៃសំណើនេះ (converse of this statement) ក៏ពិតដែរ \\[0.2cm]
+	ដូចនេះ \fbox{$x*y=x*z\iff y=z$} ។
+\end{enumerate}
+\end{proof}
+
+
+
+
+
+
+
+
+
 
 
 
